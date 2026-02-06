@@ -15,8 +15,13 @@ from pydantic import BaseModel, Field, PositiveFloat, ValidationError, field_val
 class TransactionModel(BaseModel):
     """Pydantic model used to validate transaction inputs."""
 
-    amount: PositiveFloat = Field(..., description="Amount to spend in USDC.")
-    target: str = Field(..., description="Spending target identifier (e.g., API_CREDITS).")
+    amount: PositiveFloat = Field(
+        ..., description="Amount to spend in USDC."
+    )
+    target: str = Field(
+        ...,
+        description="Spending target identifier (e.g., API_CREDITS).",
+    )
     created_at: datetime = Field(
         default_factory=lambda: datetime.now(timezone.utc),
         description="Timestamp when the transaction was created.",

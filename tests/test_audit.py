@@ -8,7 +8,6 @@ and root causes described in the challenge brief.
 
 from pathlib import Path
 
-
 AUDIT_PATH = (
     Path(__file__).resolve().parent.parent
     / "delivery_challenge"
@@ -40,7 +39,9 @@ def test_audit_mentions_fulfillment_latency() -> None:
 
 
 def test_audit_mentions_status_dissonance() -> None:
-    """The audit should discuss status dissonance between Finance and Delivery systems."""
+    """The audit should discuss status dissonance between Finance and Delivery
+    systems.
+    """
 
     content = _read_audit_text()
     assert "Status Dissonance" in content

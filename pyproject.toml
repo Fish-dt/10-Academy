@@ -1,24 +1,28 @@
 [project]
 name = "project-chimera"
 version = "0.1.0"
-description = "Data Warehouse Audit and Delivery Challenge"
+description = "Autonomous Influencer Agentic Infrastructure"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "pytest>=8.0.0",
     "pandas>=2.2.0",
+    "numpy>=1.26.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0",
+    "pyright>=1.1.350",
 ]
 
 [tool.ruff]
-# Enable strict linting
 line-length = 88
 select = ["E", "F", "I", "N"]
 
 [tool.pyright]
-# Professional-grade type checking
 include = ["."]
 typeCheckingMode = "basic"
 
 [tool.pytest.ini_options]
-# Ensures pytest looks in the right place
 testpaths = ["tests"]
