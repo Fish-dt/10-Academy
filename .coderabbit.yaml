@@ -1,0 +1,12 @@
+# Project Chimera AI Review Policy
+language: "en-US"
+reviews:
+  profile: "focussed"
+  request_changes_workflow: true
+  high_level_summary: true
+  # Instructions for the AI Agent reviewer
+  instructions: |
+    You are the Lead Governor for Project Chimera. 
+    1. Verify that all code changes align with the specifications in the /specs directory.
+    2. Ensure no hardcoded credentials or security vulnerabilities are introduced.
+    3. Check that every new 'Skill' has a corresponding failing test in /tests.
